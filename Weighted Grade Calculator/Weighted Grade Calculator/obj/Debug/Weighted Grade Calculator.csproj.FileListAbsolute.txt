@@ -1,0 +1,9 @@
+c:\users\conner\documents\visual studio 2013\Projects\Weighted Grade Calculator\Weighted Grade Calculator\bin\Debug\Weighted Grade Calculator.exe.config
+c:\users\conner\documents\visual studio 2013\Projects\Weighted Grade Calculator\Weighted Grade Calculator\bin\Debug\Weighted Grade Calculator.exe
+c:\users\conner\documents\visual studio 2013\Projects\Weighted Grade Calculator\Weighted Grade Calculator\bin\Debug\Weighted Grade Calculator.pdb
+c:\users\conner\documents\visual studio 2013\Projects\Weighted Grade Calculator\Weighted Grade Calculator\obj\Debug\Weighted Grade Calculator.csprojResolveAssemblyReference.cache
+c:\users\conner\documents\visual studio 2013\Projects\Weighted Grade Calculator\Weighted Grade Calculator\obj\Debug\Weighted_Grade_Calculator.Properties.Resources.resources
+c:\users\conner\documents\visual studio 2013\Projects\Weighted Grade Calculator\Weighted Grade Calculator\obj\Debug\Weighted Grade Calculator.csproj.GenerateResource.Cache
+c:\users\conner\documents\visual studio 2013\Projects\Weighted Grade Calculator\Weighted Grade Calculator\obj\Debug\Weighted Grade Calculator.exe
+c:\users\conner\documents\visual studio 2013\Projects\Weighted Grade Calculator\Weighted Grade Calculator\obj\Debug\Weighted Grade Calculator.pdb
+c:\users\conner\documents\visual studio 2013\Projects\Weighted Grade Calculator\Weighted Grade Calculator\obj\Debug\Weighted_Grade_Calculator.WeightedGradeForm.resources
