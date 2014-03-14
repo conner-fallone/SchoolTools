@@ -7,3 +7,13 @@ c:\users\conner\documents\visual studio 2013\Projects\Weighted Grade Calculator\
 c:\users\conner\documents\visual studio 2013\Projects\Weighted Grade Calculator\Weighted Grade Calculator\obj\Debug\Weighted Grade Calculator.exe
 c:\users\conner\documents\visual studio 2013\Projects\Weighted Grade Calculator\Weighted Grade Calculator\obj\Debug\Weighted Grade Calculator.pdb
 c:\users\conner\documents\visual studio 2013\Projects\Weighted Grade Calculator\Weighted Grade Calculator\obj\Debug\Weighted_Grade_Calculator.WeightedGradeForm.resources
+C:\Users\Conner\Documents\GitHub\SchoolTools\Weighted Grade Calculator\Weighted Grade Calculator\bin\Debug\Weighted Grade Calculator.exe.config
+C:\Users\Conner\Documents\GitHub\SchoolTools\Weighted Grade Calculator\Weighted Grade Calculator\obj\Debug\Weighted Grade Calculator.exe
+C:\Users\Conner\Documents\GitHub\SchoolTools\Weighted Grade Calculator\Weighted Grade Calculator\obj\Debug\Weighted Grade Calculator.pdb
+C:\Users\Conner\Documents\GitHub\SchoolTools\Weighted Grade Calculator\Weighted Grade Calculator\bin\Debug\Weighted Grade Calculator.exe
+C:\Users\Conner\Documents\GitHub\SchoolTools\Weighted Grade Calculator\Weighted Grade Calculator\bin\Debug\Weighted Grade Calculator.pdb
+C:\Users\Conner\Documents\GitHub\SchoolTools\Weighted Grade Calculator\Weighted Grade Calculator\obj\Debug\Weighted Grade Calculator.csprojResolveAssemblyReference.cache
+C:\Users\Conner\Documents\GitHub\SchoolTools\Weighted Grade Calculator\Weighted Grade Calculator\obj\Debug\Weighted_Grade_Calculator.WeightedGradeForm.resources
+C:\Users\Conner\Documents\GitHub\SchoolTools\Weighted Grade Calculator\Weighted Grade Calculator\obj\Debug\Weighted_Grade_Calculator.Properties.Resources.resources
+C:\Users\Conner\Documents\GitHub\SchoolTools\Weighted Grade Calculator\Weighted Grade Calculator\obj\Debug\Weighted Grade Calculator.csproj.GenerateResource.Cache
+C:\Users\Conner\Documents\GitHub\SchoolTools\Weighted Grade Calculator\Weighted Grade Calculator\obj\Debug\Weighted_Grade_Calculator.GPACalculatorForm.resources
