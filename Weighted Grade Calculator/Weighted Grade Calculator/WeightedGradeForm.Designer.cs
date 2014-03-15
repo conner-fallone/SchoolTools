@@ -354,6 +354,7 @@
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
             this.MainMenuStrip = this.menuStrip1;
             this.Name = "WeightedGradeForm";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "School Tools";
             ((System.ComponentModel.ISupportInitialize)(this.pointsEarnedNumeric)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pointsPossibleNumeric)).EndInit();
