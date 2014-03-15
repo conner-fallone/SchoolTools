@@ -24,26 +24,26 @@ namespace Weighted_Grade_Calculator
 
         private void addBtn_Click(object sender, EventArgs e)
         {
-            if (numericUpDown2.Value == 0 || numericUpDown3.Value == 0){
+            if (pointsPossibleNumeric.Value == 0 || weightNumeric.Value == 0){
                 MessageBox.Show("Can't have 0 points possible or weight.", "Oops", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
                 return;
             }
 
-            if (numericUpDown1.Value > numericUpDown2.Value){
+            if (pointsEarnedNumeric.Value > pointsPossibleNumeric.Value){
                 MessageBox.Show("Can't have higher earned points than possible points.", "Oops", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
                 return;
             }
 
-            decimal percentage = numericUpDown1.Value / numericUpDown2.Value;
-            percentage = percentage * (numericUpDown3.Value * (decimal).01) * 100;
-            percentEarnedBox.AppendText("This accounted for " + percentage + "% of your grade.\n");
+            decimal percentage = pointsEarnedNumeric.Value / pointsPossibleNumeric.Value;
+            percentage = percentage * (weightNumeric.Value * (decimal).01) * 100;
+            percentEarnedBox.AppendText("This accounted for " + percentage.ToString("#.##") + "% of your grade.\n");
 
             values.Add(percentage);
-            totalWeight += numericUpDown3.Value;
+            totalWeight += weightNumeric.Value;
 
-            numericUpDown1.Value = 0;
-            numericUpDown2.Value = 0;
-            numericUpDown3.Value = 0;
+            pointsEarnedNumeric.Value = 0;
+            pointsPossibleNumeric.Value = 0;
+            weightNumeric.Value = 0;
         }
 
         private void calculateBtn_Click(object sender, EventArgs e)
@@ -55,9 +55,9 @@ namespace Weighted_Grade_Calculator
 
             calculateBtn.Enabled = false;
             addBtn.Enabled = false;
-            numericUpDown1.Enabled = false;
-            numericUpDown2.Enabled = false;
-            numericUpDown3.Enabled = false;
+            pointsEarnedNumeric.Enabled = false;
+            pointsPossibleNumeric.Enabled = false;
+            weightNumeric.Enabled = false;
 
             for (int i = 0; i < values.Count; i++)
             {
@@ -65,7 +65,7 @@ namespace Weighted_Grade_Calculator
             }
 
             finalGrade = (finalGrade / totalWeight) * 100;
-            finalGradeBox.AppendText("Your final grade is: " + finalGrade + "%.\n");
+            finalGradeBox.AppendText("Your final grade is: " + finalGrade.ToString("#.##") + "%.\n");
             finalProgress.Value = (int)finalGrade;
         }
 
@@ -77,15 +77,15 @@ namespace Weighted_Grade_Calculator
             totalWeight = 0;
             finalGrade = 0;
 
-            numericUpDown1.Value = 0;
-            numericUpDown2.Value = 0;
-            numericUpDown3.Value = 0;
+            pointsEarnedNumeric.Value = 0;
+            pointsPossibleNumeric.Value = 0;
+            weightNumeric.Value = 0;
 
             calculateBtn.Enabled = true;
             addBtn.Enabled = true;
-            numericUpDown1.Enabled = true;
-            numericUpDown2.Enabled = true;
-            numericUpDown3.Enabled = true;
+            pointsEarnedNumeric.Enabled = true;
+            pointsPossibleNumeric.Enabled = true;
+            weightNumeric.Enabled = true;
 
             finalProgress.Value = 0;
         }
@@ -105,19 +105,19 @@ namespace Weighted_Grade_Calculator
                 return;
         }
 
-        private void numericUpDown1_Enter(object sender, EventArgs e)
+        private void pointsEarnedNumeric_Enter(object sender, EventArgs e)
         {
-            numericUpDown1.Select(0, numericUpDown1.Value.ToString().Length);
+            pointsEarnedNumeric.Select(0, pointsEarnedNumeric.Value.ToString().Length);
         }
 
-        private void numericUpDown2_Enter(object sender, EventArgs e)
+        private void pointsPossibleNumeric_Enter(object sender, EventArgs e)
         {
-            numericUpDown2.Select(0, numericUpDown2.Value.ToString().Length);
+            pointsPossibleNumeric.Select(0, pointsPossibleNumeric.Value.ToString().Length);
         }
 
-        private void numericUpDown3_Enter(object sender, EventArgs e)
+        private void weightNumeric_Enter(object sender, EventArgs e)
         {
-            numericUpDown3.Select(0, numericUpDown3.Value.ToString().Length);
+            weightNumeric.Select(0, weightNumeric.Value.ToString().Length);
         }
 
         private void aboutToolStripMenuItem_Click(object sender, EventArgs e)
@@ -135,17 +135,12 @@ namespace Weighted_Grade_Calculator
                 " 3. Press calculate. This will show your final grade.", "Help", MessageBoxButtons.OK, MessageBoxIcon.Question);
         }
 
-        private void button2_Click(object sender, EventArgs e)
+        private void gpaButton_Click(object sender, EventArgs e)
         {
             GPACalculatorForm gpaForm = new GPACalculatorForm();
             this.Hide();
             gpaForm.ShowDialog();
             this.Close();
-        }
-
-        private void WeightedGradeForm_Load(object sender, EventArgs e)
-        {
-
         }
 
     }

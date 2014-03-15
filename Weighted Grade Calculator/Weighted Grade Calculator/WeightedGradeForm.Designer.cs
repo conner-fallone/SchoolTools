@@ -38,9 +38,9 @@
             this.addBtn = new System.Windows.Forms.Button();
             this.calculateBtn = new System.Windows.Forms.Button();
             this.restartBtn = new System.Windows.Forms.Button();
-            this.numericUpDown1 = new System.Windows.Forms.NumericUpDown();
-            this.numericUpDown2 = new System.Windows.Forms.NumericUpDown();
-            this.numericUpDown3 = new System.Windows.Forms.NumericUpDown();
+            this.pointsEarnedNumeric = new System.Windows.Forms.NumericUpDown();
+            this.pointsPossibleNumeric = new System.Windows.Forms.NumericUpDown();
+            this.weightNumeric = new System.Windows.Forms.NumericUpDown();
             this.menuStrip1 = new System.Windows.Forms.MenuStrip();
             this.helloToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.restartToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
@@ -50,13 +50,13 @@
             this.aboutToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.finalProgress = new System.Windows.Forms.ProgressBar();
             this.tableLayoutPanel1 = new System.Windows.Forms.TableLayoutPanel();
-            this.button2 = new System.Windows.Forms.Button();
-            this.button1 = new System.Windows.Forms.Button();
-            this.button3 = new System.Windows.Forms.Button();
-            this.button4 = new System.Windows.Forms.Button();
-            ((System.ComponentModel.ISupportInitialize)(this.numericUpDown1)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.numericUpDown2)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.numericUpDown3)).BeginInit();
+            this.gpaBtn = new System.Windows.Forms.Button();
+            this.weightedGradeBtn = new System.Windows.Forms.Button();
+            this.scheduleBtn = new System.Windows.Forms.Button();
+            this.todoBtn = new System.Windows.Forms.Button();
+            ((System.ComponentModel.ISupportInitialize)(this.pointsEarnedNumeric)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pointsPossibleNumeric)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.weightNumeric)).BeginInit();
             this.menuStrip1.SuspendLayout();
             this.tableLayoutPanel1.SuspendLayout();
             this.SuspendLayout();
@@ -166,32 +166,44 @@
             this.restartBtn.UseVisualStyleBackColor = true;
             this.restartBtn.Click += new System.EventHandler(this.restartBtn_Click);
             // 
-            // numericUpDown1
+            // pointsEarnedNumeric
             // 
-            this.numericUpDown1.BackColor = System.Drawing.Color.Khaki;
-            this.numericUpDown1.Location = new System.Drawing.Point(104, 48);
-            this.numericUpDown1.Name = "numericUpDown1";
-            this.numericUpDown1.Size = new System.Drawing.Size(120, 20);
-            this.numericUpDown1.TabIndex = 13;
-            this.numericUpDown1.Enter += new System.EventHandler(this.numericUpDown1_Enter);
+            this.pointsEarnedNumeric.BackColor = System.Drawing.Color.Khaki;
+            this.pointsEarnedNumeric.DecimalPlaces = 2;
+            this.pointsEarnedNumeric.Location = new System.Drawing.Point(104, 48);
+            this.pointsEarnedNumeric.Maximum = new decimal(new int[] {
+            1000,
+            0,
+            0,
+            0});
+            this.pointsEarnedNumeric.Name = "pointsEarnedNumeric";
+            this.pointsEarnedNumeric.Size = new System.Drawing.Size(120, 20);
+            this.pointsEarnedNumeric.TabIndex = 13;
+            this.pointsEarnedNumeric.Enter += new System.EventHandler(this.pointsEarnedNumeric_Enter);
             // 
-            // numericUpDown2
+            // pointsPossibleNumeric
             // 
-            this.numericUpDown2.BackColor = System.Drawing.Color.Khaki;
-            this.numericUpDown2.Location = new System.Drawing.Point(325, 48);
-            this.numericUpDown2.Name = "numericUpDown2";
-            this.numericUpDown2.Size = new System.Drawing.Size(120, 20);
-            this.numericUpDown2.TabIndex = 14;
-            this.numericUpDown2.Enter += new System.EventHandler(this.numericUpDown2_Enter);
+            this.pointsPossibleNumeric.BackColor = System.Drawing.Color.Khaki;
+            this.pointsPossibleNumeric.DecimalPlaces = 2;
+            this.pointsPossibleNumeric.Location = new System.Drawing.Point(325, 48);
+            this.pointsPossibleNumeric.Maximum = new decimal(new int[] {
+            1000,
+            0,
+            0,
+            0});
+            this.pointsPossibleNumeric.Name = "pointsPossibleNumeric";
+            this.pointsPossibleNumeric.Size = new System.Drawing.Size(120, 20);
+            this.pointsPossibleNumeric.TabIndex = 14;
+            this.pointsPossibleNumeric.Enter += new System.EventHandler(this.pointsPossibleNumeric_Enter);
             // 
-            // numericUpDown3
+            // weightNumeric
             // 
-            this.numericUpDown3.BackColor = System.Drawing.Color.Khaki;
-            this.numericUpDown3.Location = new System.Drawing.Point(523, 48);
-            this.numericUpDown3.Name = "numericUpDown3";
-            this.numericUpDown3.Size = new System.Drawing.Size(120, 20);
-            this.numericUpDown3.TabIndex = 15;
-            this.numericUpDown3.Enter += new System.EventHandler(this.numericUpDown3_Enter);
+            this.weightNumeric.BackColor = System.Drawing.Color.Khaki;
+            this.weightNumeric.Location = new System.Drawing.Point(523, 48);
+            this.weightNumeric.Name = "weightNumeric";
+            this.weightNumeric.Size = new System.Drawing.Size(120, 20);
+            this.weightNumeric.TabIndex = 15;
+            this.weightNumeric.Enter += new System.EventHandler(this.weightNumeric_Enter);
             // 
             // menuStrip1
             // 
@@ -264,10 +276,10 @@
             this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 33.33333F));
             this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 33.33333F));
             this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 33.33333F));
-            this.tableLayoutPanel1.Controls.Add(this.button2, 1, 0);
-            this.tableLayoutPanel1.Controls.Add(this.button1, 0, 0);
-            this.tableLayoutPanel1.Controls.Add(this.button3, 2, 0);
-            this.tableLayoutPanel1.Controls.Add(this.button4, 0, 1);
+            this.tableLayoutPanel1.Controls.Add(this.gpaBtn, 1, 0);
+            this.tableLayoutPanel1.Controls.Add(this.weightedGradeBtn, 0, 0);
+            this.tableLayoutPanel1.Controls.Add(this.scheduleBtn, 2, 0);
+            this.tableLayoutPanel1.Controls.Add(this.todoBtn, 0, 1);
             this.tableLayoutPanel1.Location = new System.Drawing.Point(338, 327);
             this.tableLayoutPanel1.Name = "tableLayoutPanel1";
             this.tableLayoutPanel1.RowCount = 2;
@@ -276,46 +288,46 @@
             this.tableLayoutPanel1.Size = new System.Drawing.Size(294, 142);
             this.tableLayoutPanel1.TabIndex = 19;
             // 
-            // button2
+            // gpaBtn
             // 
-            this.button2.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.button2.Location = new System.Drawing.Point(101, 3);
-            this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(91, 65);
-            this.button2.TabIndex = 1;
-            this.button2.Text = "GPA Calculator";
-            this.button2.UseVisualStyleBackColor = true;
-            this.button2.Click += new System.EventHandler(this.button2_Click);
+            this.gpaBtn.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.gpaBtn.Location = new System.Drawing.Point(101, 3);
+            this.gpaBtn.Name = "gpaBtn";
+            this.gpaBtn.Size = new System.Drawing.Size(91, 65);
+            this.gpaBtn.TabIndex = 1;
+            this.gpaBtn.Text = "GPA Calculator";
+            this.gpaBtn.UseVisualStyleBackColor = true;
+            this.gpaBtn.Click += new System.EventHandler(this.gpaButton_Click);
             // 
-            // button1
+            // weightedGradeBtn
             // 
-            this.button1.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.button1.Location = new System.Drawing.Point(3, 3);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(91, 65);
-            this.button1.TabIndex = 0;
-            this.button1.Text = "Weighted Grade Calculator";
-            this.button1.UseVisualStyleBackColor = true;
+            this.weightedGradeBtn.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.weightedGradeBtn.Location = new System.Drawing.Point(3, 3);
+            this.weightedGradeBtn.Name = "weightedGradeBtn";
+            this.weightedGradeBtn.Size = new System.Drawing.Size(91, 65);
+            this.weightedGradeBtn.TabIndex = 0;
+            this.weightedGradeBtn.Text = "Weighted Grade Calculator";
+            this.weightedGradeBtn.UseVisualStyleBackColor = true;
             // 
-            // button3
+            // scheduleBtn
             // 
-            this.button3.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.button3.Location = new System.Drawing.Point(199, 3);
-            this.button3.Name = "button3";
-            this.button3.Size = new System.Drawing.Size(92, 65);
-            this.button3.TabIndex = 2;
-            this.button3.Text = "My Schedule";
-            this.button3.UseVisualStyleBackColor = true;
+            this.scheduleBtn.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.scheduleBtn.Location = new System.Drawing.Point(199, 3);
+            this.scheduleBtn.Name = "scheduleBtn";
+            this.scheduleBtn.Size = new System.Drawing.Size(92, 65);
+            this.scheduleBtn.TabIndex = 2;
+            this.scheduleBtn.Text = "My Schedule";
+            this.scheduleBtn.UseVisualStyleBackColor = true;
             // 
-            // button4
+            // todoBtn
             // 
-            this.button4.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.button4.Location = new System.Drawing.Point(3, 74);
-            this.button4.Name = "button4";
-            this.button4.Size = new System.Drawing.Size(91, 65);
-            this.button4.TabIndex = 3;
-            this.button4.Text = "Todo";
-            this.button4.UseVisualStyleBackColor = true;
+            this.todoBtn.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.todoBtn.Location = new System.Drawing.Point(3, 74);
+            this.todoBtn.Name = "todoBtn";
+            this.todoBtn.Size = new System.Drawing.Size(91, 65);
+            this.todoBtn.TabIndex = 3;
+            this.todoBtn.Text = "Todo";
+            this.todoBtn.UseVisualStyleBackColor = true;
             // 
             // WeightedGradeForm
             // 
@@ -325,9 +337,9 @@
             this.ClientSize = new System.Drawing.Size(815, 509);
             this.Controls.Add(this.tableLayoutPanel1);
             this.Controls.Add(this.finalProgress);
-            this.Controls.Add(this.numericUpDown3);
-            this.Controls.Add(this.numericUpDown2);
-            this.Controls.Add(this.numericUpDown1);
+            this.Controls.Add(this.weightNumeric);
+            this.Controls.Add(this.pointsPossibleNumeric);
+            this.Controls.Add(this.pointsEarnedNumeric);
             this.Controls.Add(this.restartBtn);
             this.Controls.Add(this.calculateBtn);
             this.Controls.Add(this.addBtn);
@@ -343,10 +355,9 @@
             this.MainMenuStrip = this.menuStrip1;
             this.Name = "WeightedGradeForm";
             this.Text = "School Tools";
-            this.Load += new System.EventHandler(this.WeightedGradeForm_Load);
-            ((System.ComponentModel.ISupportInitialize)(this.numericUpDown1)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.numericUpDown2)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.numericUpDown3)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pointsEarnedNumeric)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pointsPossibleNumeric)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.weightNumeric)).EndInit();
             this.menuStrip1.ResumeLayout(false);
             this.menuStrip1.PerformLayout();
             this.tableLayoutPanel1.ResumeLayout(false);
@@ -367,9 +378,9 @@
         private System.Windows.Forms.Button addBtn;
         private System.Windows.Forms.Button calculateBtn;
         private System.Windows.Forms.Button restartBtn;
-        private System.Windows.Forms.NumericUpDown numericUpDown1;
-        private System.Windows.Forms.NumericUpDown numericUpDown2;
-        private System.Windows.Forms.NumericUpDown numericUpDown3;
+        private System.Windows.Forms.NumericUpDown pointsEarnedNumeric;
+        private System.Windows.Forms.NumericUpDown pointsPossibleNumeric;
+        private System.Windows.Forms.NumericUpDown weightNumeric;
         private System.Windows.Forms.MenuStrip menuStrip1;
         private System.Windows.Forms.ToolStripMenuItem helloToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem helpToolStripMenuItem;
@@ -379,10 +390,10 @@
         private System.Windows.Forms.ProgressBar finalProgress;
         private System.Windows.Forms.ToolStripMenuItem usageToolStripMenuItem;
         private System.Windows.Forms.TableLayoutPanel tableLayoutPanel1;
-        private System.Windows.Forms.Button button1;
-        private System.Windows.Forms.Button button2;
-        private System.Windows.Forms.Button button3;
-        private System.Windows.Forms.Button button4;
+        private System.Windows.Forms.Button weightedGradeBtn;
+        private System.Windows.Forms.Button gpaBtn;
+        private System.Windows.Forms.Button scheduleBtn;
+        private System.Windows.Forms.Button todoBtn;
     }
 }
 
